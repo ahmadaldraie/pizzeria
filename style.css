@@ -1,0 +1,389 @@
+/*** FONTS ***/
+@font-face {
+    font-family: Nexa;
+    src: url(fonts/Nexa-ExtraLight.ttf);
+  }
+  @font-face {
+    font-family: Nexa;
+    src: url(fonts/Nexa-Heavy.ttf);
+    font-weight: bold;
+  }
+/* TYPOGRAFIE */
+body {
+    font-family: Nexa, sans-serif;
+    font-size: 100%;
+    font-weight: 550;
+ }
+ a, a:visited, a:hover, a:active {
+    text-decoration:none;
+ }
+
+ nav ul li {
+   font-size: 1.25em;
+   font-weight: bold;
+ }
+ footer {
+  text-align: center;
+ }
+ section  h1 {
+    font-size: 2em;
+ }
+  
+ /* KLEURENSCHEMAS */
+ body {
+    background: #F6F6F6;
+    color:#333333;
+ }
+ header, footer {
+    background:#333333;
+    color: #E8E8E8;
+ }
+ .container {
+   background-color: #F6F6F6;
+ }
+ a, a:visited {
+   color: #B90504;
+ }
+ a:hover {
+   color: #990100;
+ }
+ .feedback {
+  color: green;
+ }
+
+ .error {
+   color: #B90504;
+ }
+
+ .prijs {
+   color: #990100;
+ }
+
+ .mandjeLijst dd, .mandjeLijst dt {
+   background-color: #F6F6F6;
+ }
+ /**** STRUCTUUR EN LAY-OUT ****/
+ body {
+    min-height: 100vh;
+    margin: 0;
+    width: fit-content;
+    min-width: 98vw;
+ }
+ .container {
+   min-height: 100vh;
+   display: flex;
+ }
+ .verticaalLijst {
+    width: 25em;
+    min-width: 200px;
+    border-left: 2px solid #333333;
+    box-shadow: -15px 0px 8px -10px rgba(43, 43, 43, 0.67);
+    background-image: url(img/mandje.png);
+    background-position: center;
+    background-size: 10em;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+ }
+ .inhoud {
+    width: 100%;
+ }
+
+ header {
+   border-bottom: 1px solid gray;
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   justify-content: space-between;
+ }
+ footer {
+  border-top: 1px solid gray;
+  padding-top: 0.5em;
+ }
+ footer p{
+  margin: 0;
+  padding: 1em 0;
+ }
+
+ header img {
+   margin-left: 1rem;
+ }
+
+ nav {
+   margin-right: 1rem;
+ }
+ nav ul { 
+   list-style: none;   
+ }
+ nav ul li {
+   display: inline-block;
+   margin: 0.2em;
+ }
+
+ /***** Producten lijsten ****/
+
+ dt {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    margin-left: 0.3em;
+ }
+ .product {
+    display: inline-flex;
+    flex-direction: column;
+    height: 11em;
+    flex-wrap: wrap;
+    margin-right: 5%;  
+ }
+ .pizza img {
+    box-shadow: 15px 0px 8px -10px rgba(0,0,0,0.67);
+ }
+ .product h2 {
+    margin: 0;
+    display: inline-block;
+ }
+ .product .productImg {
+    align-self: flex-end;
+    height: 10em;
+ }
+ .product .omschrijving {
+    width: 20em;
+ }
+ .product .prijs {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.5em;
+ }
+ button, input[type="submit"] {
+    margin-top: auto;
+    width: 10em;
+    background-color:#333333;
+    color: #E8E8E8;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.67);
+    cursor: pointer;
+ }
+ .extra button {
+    align-self: flex-end;
+    display: inline-block;
+ }
+ button:hover, input[type="submit"]:hover{
+    background-color:#990100;
+ }
+
+/***** Mandje ****/
+ .mandjeLijst {
+    overflow: auto;
+    height: 90%;
+ }
+
+ .mandjeLijst dd {
+   display: flex;
+   flex-direction: column;
+   height: auto;
+   flex-wrap: wrap;
+   margin: 0;
+   padding-bottom: 5%;
+   border-bottom: 2px dashed #333333;
+}
+
+.mandjeLijst p {
+   margin: 0 0.2em 0.5em 0.3em;
+}
+
+.mandjeLijst .prijs {
+   font-size: 1.2em;
+   font-weight: bold;
+   align-self: flex-end;
+}
+
+.knopjes {
+   align-self: center;
+   width: 75%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+ .afnemen, .verhogen {
+   width: 2em;
+   display: inline;
+   box-shadow: none;
+ }
+
+ #bin, .verwijderen {
+   height: 1.5em;
+ }
+
+ #aantal, #totaal {
+   color: #B90504;
+ }
+
+ .verticaalLijst p:last-of-type {
+   margin-left: 0.3em;
+   font-size: larger;
+ }
+ .afrekenen {
+   align-self: center;
+   margin-bottom: 5%;
+ }
+
+/***** Aanmelden ****/
+
+#aanmelden {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+}
+
+.aanmeldenForm {
+   min-width: 25em;
+   min-height: 17.5em;
+   /*position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);*/
+   text-align: center;
+   border: 2px solid #333333;
+   box-shadow: 5px 10px 8px #333333;
+   background-color: #E8E8E8;
+}
+
+.aanmeldenForm form {
+   margin-top: 15%;
+}
+
+input:not([type="submit"]), textarea {
+   appearance: none;
+    width: 16.75em;
+    height: 2em;
+    border: 2px solid #727272;
+    border-radius: 5px;
+    cursor: text;
+    background-color: lightgray;
+    font-family: inherit;
+    margin-bottom: 1em;
+    
+}
+
+input[type="submit"] {
+   margin-top: 1em;
+}
+label {
+   display: inline-block;
+   width: 7.5em;
+}
+
+#signup {
+   width: 30.7em;
+   min-height: 40em;
+   text-align: center;
+   margin: 2rem;
+}
+
+#signup form {
+   margin-top: 5%;
+}
+
+.required::after {
+   content: "*";
+   color: #B90504;
+}
+
+#signup input[type="submit"] {
+   margin-bottom: 5%;
+}
+
+/***** Afrekenen ****/
+.wrapper {
+   min-height: 100vh;
+   position: relative;
+   overflow: hidden;
+}
+.midden {
+   height: 100%;
+   margin: 0 25em 0 0;
+   padding: 2em;
+   font-size: larger;
+
+}
+.wrapper #mandje {
+   position: absolute;
+   height: 100%;
+   top: 0;
+   right: -26em;
+   border-left: 2px solid #333333;
+   box-shadow: -15px 0px 8px -10px rgba(43, 43, 43, 0.67);
+}
+
+
+.afrekenen .verticaalLijst {
+   border-left: none;
+   box-shadow: none;
+}
+
+/*.bestelling {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}*/
+
+.adresGegevens {
+   margin-bottom: 1em;
+}
+
+.wijzigen {
+   margin-top: 1em;
+}
+
+.bestellen {
+   margin-top: 3em;
+   width: 20em;
+}
+
+textarea {
+   height: 10em;
+   width: 20em;
+}
+
+
+ /*
+clearfix hack
+http://nicolasgallagher.com/micro?clearfix?hack/
+*/
+.clearFix:before, .clearFix:after {
+   content: " ";
+   display: table;
+}
+.clearFix:after {
+   clear: both;
+}
+/* enkel voor IE6/7 */
+.clearFix {
+   zoom: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+   header img {
+      width: 225px;
+    }
+
+    .aanmeldenForm {
+      min-width: 22.5em;
+      min-height: 17em;
+   }
+
+   #signup {
+      width: 23.5em;
+   }
+
+   #signup input:not([type="submit"]) {
+      width: 13.5em;
+   }
+}
